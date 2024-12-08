@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}"/>
+   
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div>
-        <h1>hello harami hod</h1>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque architecto corporis eligendi saepe magnam, aliquid molestiae! Tenetur inventore animi hic nulla culpa commodi illo consequuntur iste distinctio a, aperiam unde.
-            
+
+    <div class=" bg-gray-200 w-1/2 p-4  flex flex-col items-center space-y-3 mx-auto mt-4">
+        <h1 class="text-2xl font-bold" data-th-text="${name}">Welcome to home page</h1>
+        <p class="text-xl text-gray-700">Youtube Channel: <span data-th-text="${Youtube}"></span></p>
+        <p>Github Repo Link: <span th:text="${GithubRepo}"></span></p>
+        <a th:href="${GithubRepo}">click</a>
+        <p class="text-xl text-gray-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, neque officia exercitationem libero
+            recusandae, corporis quibusdam amet autem ipsum non nulla dolor assumenda nam deleniti illum quas
+            perspiciatis! Itaque, corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sequi nobis
+            deleniti possimus, doloremque suscipit quasi unde ab saepe consectetur! Nesciunt aut sunt laudantium
+            voluptates earum quasi dolorem nam hic!
         </p>
+
+        <div>
+            <button class="px-3 py-3  rounded bg-blue-700 text-white hover:bg-blue-600">click here</button>
+
+        </div>
     </div>
-    
+
+    <!-- flowbite content -->
+     
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
